@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Boar
+comment0.text=
+comment1.params=
+comment1.target=void\ act()
+comment1.text=
+comment2.params=
+comment2.target=void\ consumeMyself()
+comment2.text=
+comment3.params=
+comment3.target=void\ takeDamage()
+comment3.text=
+comment4.params=
+comment4.target=void\ die()
+comment4.text=
+comment5.params=
+comment5.target=void\ mover()
+comment5.text=
+comment6.params=
+comment6.target=void\ charge()
+comment6.text=
+numComments=7
