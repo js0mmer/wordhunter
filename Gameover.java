@@ -1,25 +1,24 @@
-import greenfoot.*;
+/*    */ import greenfoot.Actor;
+/*    */ import greenfoot.Greenfoot;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public class GameOver
+/*    */   extends Actor
+/*    */ {
+/* 17 */   public void act() { Greenfoot.stop(); }
+/*    */ }
 
-public class Gameover extends ActorMethods
-{
-    int actCount = 0;
-    int var1 = 0;
-    int var2 = -3;
-    int transparency = 250;
-    GreenfootImage img = getImage();
-    public void act() 
-    {
-        if(var1==30)
-        {
-            var1 = 0;
-            var2 *=-1;
-        }
-        else
-        {
-            var1++;
-        }
-        transparency += var2;
-        if(actCount>60) img.setTransparency(transparency);
-        actCount++;
-    }    
-}
+
+/* Location:              C:\Users\jacob\Desktop\jd\greenfoot6984158792478336299.jar!\GameOver.class
+ * Java compiler version: 11 (55.0)
+ * JD-Core Version:       1.0.7
+ */
