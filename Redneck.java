@@ -121,8 +121,8 @@
 /* 121 */       int x = getX();
 /* 122 */       int y = getY();
 /* 123 */       int angle = getRotation();
-/* 124 */       Bullet bullt = new Bullet(angle);
-/* 125 */       getWorld().addObject(bullt, x, y);
+/* 124 */       Bullet bullet = new Bullet(angle);
+/* 125 */       getWorld().addObject(bullet, x, y);
 /* 126 */       this.isSpacebarDown = true;
 /* 127 */       firstShot = 2;
 /* 128 */       this.time2 = 0;

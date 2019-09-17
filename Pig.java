@@ -82,7 +82,7 @@
 /*  82 */       if (Redneck.firstShot == 2) {
 /*     */         
 /*  84 */         this.maybeMove = this.extraint;
-/*  85 */         this.pigStride = 40;
+/*  85 */         this.pigStride = 20;
 /*     */       } 
 /*  87 */       if (this.maybeMove == 1)
 /*     */       {

@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class TitleMenu
+public class TitleMenu extends Actor
 {
     GreenfootImage img = getImage();
     boolean selected = false;

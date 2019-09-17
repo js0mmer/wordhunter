@@ -32,6 +32,8 @@
 /* 32 */     addObject(sTART, 600, 476);
 /* 33 */     QUIT qUIT = new QUIT();
 /* 34 */     addObject(qUIT, 593, 704);
+             TitleMenu title = new TitleMenu();
+             addObject(title, 200, 200);
 /*    */   }
 /*    */ }
 
