@@ -1,15 +1,4 @@
-/*    */ import greenfoot.Actor;
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
+ import greenfoot.Actor;
 /*    */ public class YouWin
 /*    */   extends Actor
 /*    */ {

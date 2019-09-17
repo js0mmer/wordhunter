@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class TitleMe
+public class TitleMenu
 {
     GreenfootImage img = getImage();
     boolean selected = false;
