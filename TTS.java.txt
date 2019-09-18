@@ -13,8 +13,14 @@ import java.io.OutputStream;
 public class TTS  
 {
     
+    /**
+     * Tracks whether the synthesizer properties and speech engine have been set up
+     */
     private static boolean setup = false;
     
+    /**
+     * Sets up the synthesizer properties and speech engine
+     */
     private static void setupSynthesizer() {
         try {
             // Set property as Kevin Dictionary 
@@ -32,6 +38,11 @@ public class TTS
         }
     }
     
+    /**
+     * Speaks the provided text using the FreeTTS library.
+     * 
+     * @param text The Text to be said
+     */
     public static void speak(String text) {
         try {
             if (!setup) { // if not set up, set it up
