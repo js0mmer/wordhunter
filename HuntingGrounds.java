@@ -53,8 +53,6 @@ public class HuntingGrounds
       addObject(winner, 600, 250);
       QUIT quit = new QUIT();
       addObject(quit, 580, 400);
-      ShopTransfer strans = new ShopTransfer();
-      addObject(strans, 570, 500);
     } 
     if (this.time < 10)
     {

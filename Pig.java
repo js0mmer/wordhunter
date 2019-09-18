@@ -106,10 +106,6 @@ public class Pig
       removeTouching(Bullet.class);
       this.time = 0;
       Greenfoot.playSound("Squeal.mp3");
-      if (PoisonBullets.tranqOn == 1)
-      {
-        this.rodeo = 100;
-      }
     } 
     if (this.time > 8 && !this.baconOrNot)
     {

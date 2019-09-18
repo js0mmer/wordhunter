@@ -28,7 +28,6 @@ public class Redneck
     this.time4++;
     reset();
     music();
-    dodge();
     if (isTouching(Boar.class) && Boar.boarDeadOrNo == 0)
     {
       boarDie++;
@@ -38,26 +37,6 @@ public class Redneck
       this.fireRate = 10;
     }
   }
-
-  
-  public void dodge() {
-    if (Medicine.speedOn == 1) {
-      
-      if (!Greenfoot.isKeyDown("Shift")) {
-        
-        this.spaceDown = false;
-        this.speed = 5;
-      } 
-      
-      if (Greenfoot.isKeyDown("Shift") && !this.spaceDown) {
-        
-        this.spaceDown = true;
-        this.speed = 15;
-      } 
-    } 
-  }
-
-  
   public void reset() {
     if (this.time < 2) {
       
