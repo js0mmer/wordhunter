@@ -1,15 +1,5 @@
 import greenfoot.Actor;
 
-
-
-
-
-
-
-
-
-
-
 public class Bullet
   extends Actor
 {
