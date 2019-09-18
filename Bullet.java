@@ -17,7 +17,9 @@ public class Bullet
 
 
   
-  public Bullet(int angle) { setRotation(angle); }
+  public Bullet(int angle) { 
+      setRotation(angle); 
+    }
 
 
   
