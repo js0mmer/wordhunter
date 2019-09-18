@@ -2,13 +2,6 @@ import greenfoot.Actor;
 import greenfoot.Greenfoot;
 import greenfoot.GreenfootSound;
 
-
-
-
-
-
-
-
 public class Redneck
   extends Actor
 {
@@ -223,5 +216,3 @@ public class Redneck
     }
   }
 }
-
-

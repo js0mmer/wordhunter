@@ -1,17 +1,5 @@
 import greenfoot.World;
 
-
-
-
-
-
-
-
-
-
-
-
-
 public class StartScreen
   extends World
 {
@@ -19,11 +7,6 @@ public class StartScreen
     super(1200, 800, 1);
     prepare();
   }
-
-
-
-
-
   
   private void prepare() {
     INSTRUCTIONS iNSTRUCTIONS = new INSTRUCTIONS();
@@ -32,7 +15,10 @@ public class StartScreen
     addObject(sTART, 600, 476);
     QUIT qUIT = new QUIT();
     addObject(qUIT, 593, 704);
+    TitleMenu title = new TitleMenu();
+    addObject(title, 200, 200);
   }
 }
+
 
 

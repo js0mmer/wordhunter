@@ -1,14 +1,6 @@
 import greenfoot.Actor;
 import greenfoot.Greenfoot;
 
-
-
-
-
-
-
-
-
 public class Pig
   extends Actor
 {
