@@ -28,36 +28,15 @@ public class Redneck
     this.time4++;
     reset();
     music();
-    dodge();
     if (isTouching(Boar.class) && Boar.boarDeadOrNo == 0)
     {
       boarDie++;
     }
     if (gunMode == 3)
     {
-      this.fireRate = 10;
+      this.fireRate = 3;
     }
   }
-
-  
-  public void dodge() {
-    if (Medicine.speedOn == 1) {
-      
-      if (!Greenfoot.isKeyDown("Shift")) {
-        
-        this.spaceDown = false;
-        this.speed = 5;
-      } 
-      
-      if (Greenfoot.isKeyDown("Shift") && !this.spaceDown) {
-        
-        this.spaceDown = true;
-        this.speed = 15;
-      } 
-    } 
-  }
-
-  
   public void reset() {
     if (this.time < 2) {
       
@@ -72,7 +51,7 @@ public class Redneck
     } 
   }
 
-  
+  int firedirection;
   public void playerMechanics() {
     if (Greenfoot.isKeyDown("w")) {
       
@@ -90,6 +69,7 @@ public class Redneck
       
       setRotation(180);
       move(this.speed);
+      
     } 
     
     if (Greenfoot.isKeyDown("d")) {
@@ -146,7 +126,7 @@ public class Redneck
       int x = getX();
       int y = getY();
       
-      int angle = getRotation();
+      int angle = ((Actor)getWorld().getObjects(Redneck.class).get(0)).getRotation();
 
       
       Bullet bullt = new Bullet(angle);
@@ -177,7 +157,6 @@ public class Redneck
       firstShot = 2;
       this.time2 = 0;
     } 
-    setRotation(0);
   }
 
   

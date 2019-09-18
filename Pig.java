@@ -4,6 +4,7 @@ import greenfoot.Greenfoot;
 public class Pig
   extends Actor
 {
+  private String[] words = new String[]{ "gay", "bruh" };
   boolean baconOrNot = false;
   int health = 15;
   int time = 0;
@@ -85,31 +86,23 @@ public class Pig
     } 
   }
 
-
-  
   public void die() {
     if (this.health < 1 && !this.baconOrNot) {
-      
       setImage("Bacon.png");
       this.baconOrNot = true;
       Greenfoot.playSound("Deadpig.mp3");
       PigCount--;
+      spell();
     } 
   }
-
   
   public void takeDamage() {
     if (isTouching(Bullet.class) && !this.baconOrNot && this.time > 0) {
-      
       setImage("PigRightDamage.png");
       this.health -= Bullet.damage;
       removeTouching(Bullet.class);
       this.time = 0;
       Greenfoot.playSound("Squeal.mp3");
-      if (PoisonBullets.tranqOn == 1)
-      {
-        this.rodeo = 100;
-      }
     } 
     if (this.time > 8 && !this.baconOrNot)
     {
@@ -122,7 +115,6 @@ public class Pig
     if (this.Bacon == 1)
     {
       if (isTouching(Redneck.class)) {
-        
         getWorld().removeObject(this);
         BaconCount++;
         SecondaryCount++;
@@ -142,6 +134,17 @@ public class Pig
     {
       this.Bacon = 1;
     }
+  }
+  
+  public void spell() {
+      int word = Greenfoot.getRandomNumber(words.length);
+      String spell = Greenfoot.ask("Please spell the word: " + words[word]);
+      while (!spell.toLowerCase().contains(words[word])) {
+          spell = Greenfoot.ask("Please spell the word: " + words[word]);
+          if (spell.contains(words[word])) {
+              break;
+          }
+      }
   }
 }
 

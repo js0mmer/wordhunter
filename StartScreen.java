@@ -17,6 +17,17 @@ public class StartScreen
     addObject(qUIT, 593, 704);
     TitleMenu title = new TitleMenu();
     addObject(title, 200, 200);
+    
+    // Load text to speech libraries
+    NativeLoader loader = new NativeLoader();
+    loader.addClasspath("./lib/freetts-jsapi10.jar");
+    loader.addClasspath("./lib/freetts.jar");
+    loader.addClasspath("./lib/cmu_us_kal.jar");
+    loader.addClasspath("./lib/jsapi.jar");
+    // pre load text to speech class to make sure libariers load
+    loader.loadClass("TTS");
+    
+    TTS.speak("testing"); // testing
   }
 }
 
