@@ -92,7 +92,8 @@ public class Pig
       this.baconOrNot = true;
       Greenfoot.playSound("Deadpig.mp3");
       PigCount--;
-      spell();
+      Actor spelling = new TEXT();
+      getWorld().addObject(spelling, getWorld().getWidth()/2, getWorld().getHeight()/2);
     } 
   }
   
@@ -136,16 +137,6 @@ public class Pig
     }
   }
   
-  public void spell() {
-      int word = Greenfoot.getRandomNumber(words.length);
-      String spell = Greenfoot.ask("Please spell the word: " + words[word]);
-      while (!spell.toLowerCase().contains(words[word])) {
-          spell = Greenfoot.ask("Please spell the word: " + words[word]);
-          if (spell.contains(words[word])) {
-              break;
-          }
-      }
-  }
 }
 
 
