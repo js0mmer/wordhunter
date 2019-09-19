@@ -18,16 +18,19 @@ public class StartScreen
     TitleMenu title = new TitleMenu();
     addObject(title, 200, 200);
     
-    // Load text to speech libraries
+    // Load native libraries for text to speech and json parsing
     NativeLoader loader = new NativeLoader();
     loader.addClasspath("./lib/freetts-jsapi10.jar");
     loader.addClasspath("./lib/freetts.jar");
     loader.addClasspath("./lib/cmu_us_kal.jar");
     loader.addClasspath("./lib/jsapi.jar");
-    // pre load text to speech class to make sure libariers load
-    loader.loadClass("TTS");
+    loader.addClasspath("./lib/gson-2.8.5.jar");
     
-    TTS.speak("testing"); // testing
+    // pre load classes utilizing these libraries so it works properly
+    loader.loadClass("TTS");
+    loader.loadClass("Wordnik");
+    
+    TTS.speak("table. " + Wordnik.getDefinition("table")); // testing
   }
 }
 

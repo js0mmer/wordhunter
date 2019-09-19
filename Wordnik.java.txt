@@ -1,0 +1,119 @@
+import com.google.gson.Gson;
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+/**
+ * Class for communicating with the Wordnik API to retrieve definitions for words.
+ * 
+ * @author Jacob Sommer
+ * @version 2019-09-18
+ */
+public class Wordnik  
+{
+    /**
+     * Jacob's api key for accessing the Wordnik API
+     */
+    private static final String API_KEY = "aa874e4afcc0058f3700901f83d095bf8ab82b61597ea8273";
+    
+    /**
+     * Gets definitions of the specified word by sending a GET request
+     * to the Wordnik API
+     * 
+     * @param word The word you want to get the definition of
+     * @return The definition of the word
+     */
+    public static String getDefinition(String word) {
+        Response response = sendGet("https://api.wordnik.com/v4/word.json/" +
+                word + "/definitions?limit=1&includeRelated=false&useCanonical=false&includeTags=false&api_key=" +API_KEY);
+        return response.getText();
+    }
+    
+    /**
+     * Sends a get request to a certain URL and returns the JSON object
+     * that the server responded with
+     * 
+     * @param url The URL to send the request to, given as a string
+     * @return The response object
+     */
+    private static Response sendGet(String url) {
+        try {
+            // create URL from string
+            URL urlObj = new URL(url);
+            // open a secure connection
+            HttpsURLConnection con = (HttpsURLConnection) urlObj.openConnection();
+    
+            // add request header
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
+    
+            /*
+            // for debugging
+            int responseCode = con.getResponseCode();
+            System.out.println("\nSending 'GET' request to URL : " + url);
+            System.out.println("Response Code : " + responseCode);
+            */
+    
+            // create a BufferedReader for reading the input from the server
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+                    
+            // stream the input to a StringBuffer:
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+    
+            while ((inputLine = in.readLine()) != null) { // read lines
+                response.append(inputLine); // append them to string buffer
+            }
+            in.close(); // close the input string
+            
+            // convert the StringBuffer with the json response to the response object
+            Gson gson = new Gson();
+            String rawJson = response.toString(); // convert StringBuffer to string
+            // convert string to response object
+            Response json = gson.fromJson(rawJson.substring(1,
+                    rawJson.length() - 1), Response.class);
+    
+            return json;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Something went wrong with retrieving the definitions");
+            return null;
+        }
+    }
+
+    /**
+     * Template class for the JSON object received
+     * @author Jacob Sommer
+     * @version 2019-09-18
+     */
+    public class Response {
+
+        /**
+         * Stores the value of the "text" key in the JSON object
+         */
+        private String text;
+
+        /**
+         * Gets the value of the "text" key in the JSON object
+         * 
+         * @return The text string
+         */
+        public String getText() {
+            return text;
+        }
+        
+        /**
+         * Sets the value of the "text" key in the JSON object
+         * 
+         * @param text The new value of the text string
+         */
+        public void setText(String text) {
+            this.text = text;
+        }
+    }
+}
