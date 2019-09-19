@@ -7,9 +7,10 @@
 # BlueJ files
 *.ctxt
 
-# DO NOT IGNORE TTS CLASSES - PRECOMPILED
-!TTS.class
-!TTS.ctxt
+# Do NOT ignore these classes - PRECOMPILED
+# They use native libraries
+!TTS.*
+!Wordnik.*
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
