@@ -10,7 +10,7 @@
 # Do NOT ignore these classes - PRECOMPILED
 # They use native libraries
 !TTS.*
-!Wordnik.*
+!Wordnik*
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
