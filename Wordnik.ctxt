@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Wordnik
+comment0.text=\r\n\ Class\ for\ communicating\ with\ the\ Wordnik\ API\ to\ retrieve\ definitions\ for\ words.\r\n\ \r\n\ @author\ Jacob\ Sommer\r\n\ @version\ 2019-09-18\r\n
+comment1.params=word
+comment1.target=java.lang.String\ getDefinition(java.lang.String)
+comment1.text=\r\n\ Gets\ definitions\ of\ the\ specified\ word\ by\ sending\ a\ GET\ request\r\n\ to\ the\ Wordnik\ API\r\n\ \r\n\ @param\ word\ The\ word\ you\ want\ to\ get\ the\ definition\ of\r\n\ @return\ The\ definition\ of\ the\ word\r\n
+comment2.params=url
+comment2.target=Wordnik.Response\ sendGet(java.lang.String)
+comment2.text=\r\n\ Sends\ a\ get\ request\ to\ a\ certain\ URL\ and\ returns\ the\ JSON\ object\r\n\ that\ the\ server\ responded\ with\r\n\ \r\n\ @param\ url\ The\ URL\ to\ send\ the\ request\ to,\ given\ as\ a\ string\r\n\ @return\ The\ response\ object\r\n
+numComments=3
