@@ -29,8 +29,9 @@ public class StartScreen
     // pre load classes utilizing these libraries so it works properly
     loader.loadClass("TTS");
     loader.loadClass("Wordnik");
+    loader.loadClass("Wordnik$Response");
     
-    TTS.speak("table. " + Wordnik.getDefinition("table")); // testing
+    // TTS.speak("table. " + Wordnik.getDefinition("table")); // testing
   }
 }
 

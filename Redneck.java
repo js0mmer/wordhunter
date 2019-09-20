@@ -166,7 +166,7 @@ public class Redneck
       this.soundT.stop();
     }
     if (firstShot == 2 && this.musicYesNo == true) {
-      
+      this.soundT.setVolume(50);
       this.soundT.play();
       this.musicYesNo = false;
     } 
