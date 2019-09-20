@@ -70,13 +70,17 @@ public class TEXT extends Actor
      */
     public void spell() {
         int word = (int) (Math.random() * WORDS.length);
-        setImage(new GreenfootImage(WORDS[word], 300, Color.BLACK, ALPHA));
+        setImage(new GreenfootImage(WORDS[word], 150, Color.BLACK, ALPHA));
         String spell = "";
         while (!spell.toLowerCase().contains(WORDS[word])) {
             spell = Greenfoot.ask("Please spell the word: " + WORDS[word]);
         }
-        Greenfoot.stop();
-        TTS.speak(WORDS[word] + ". " + Wordnik.getDefinition(WORDS[word]));
-        Greenfoot.start();
+        TTS.speak(WORDS[word]);
+        if (Wordnik.getDefinition(WORDS[word]) == null) {
+            System.out.println(WORDS[word] + ": Definition Unknown");
+        }
+        else {
+            System.out.println(WORDS[word] + ": " + Wordnik.getDefinition(WORDS[word]));
+        }
    }
 }    
