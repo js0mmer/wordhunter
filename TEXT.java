@@ -29,13 +29,12 @@ public class TEXT extends Actor
     public void spell() {
         int word = Greenfoot.getRandomNumber(words.length);
         setImage(new GreenfootImage(words[word], 300, Color.BLACK, alpha));
-        String spell = Greenfoot.ask("Please spell the word: " + words[word]);
+        String spell = "";
         while (!spell.toLowerCase().contains(words[word])) {
             spell = Greenfoot.ask("Please spell the word: " + words[word]);
-            if (spell.contains(words[word])) {
-                TTS.speak(words[word]);
-                break;
-            }
         }
-    }
+        Greenfoot.stop();
+        TTS.speak(words[word] + ". " + Wordnik.getDefinition(words[word]));
+        Greenfoot.start();
+   }
 }    
