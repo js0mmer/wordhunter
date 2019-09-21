@@ -16,7 +16,7 @@ public class StartScreen
     QUIT qUIT = new QUIT();
     addObject(qUIT, 593, 704);
     TitleMenu title = new TitleMenu();
-    addObject(title, 200, 200);
+    addObject(title, -550, 200);
     
     // Load native libraries for text to speech and json parsing
     NativeLoader loader = new NativeLoader();

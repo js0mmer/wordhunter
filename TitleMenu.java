@@ -6,6 +6,7 @@ public class TitleMenu extends Actor
     boolean selected = false;
     int mX = 0;
     int mY = 0;
+    
     public void act()
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -21,8 +22,8 @@ public class TitleMenu extends Actor
     {
         if(mX>=getX()-img.getWidth()/2 && mX<=getX()+img.getWidth()/2 && mY>=getY()-img.getHeight()/2 && mY<=getY()+img.getHeight()/2)
         {
-            if(getX()<350) setLocation(getX()+5,getY());
+            if(getX()<325) setLocation(getX()+10,getY());
         }
-        else if(getX()>-20) setLocation(getX()-15,getY());
+        else if(getX()>-550) setLocation(getX()-10,getY());
     }    
 }
