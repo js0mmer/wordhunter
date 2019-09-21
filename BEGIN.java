@@ -19,9 +19,7 @@ public class BEGIN
       MouseInfo mouse = Greenfoot.getMouseInfo();
       Greenfoot.setWorld(new HuntingGrounds());
       Boar.radish = 0;
-      PoisonBullets.tranqOn = 0;
       HealthPotion.healthOn = 0;
-      Medicine.speedOn = 0;
       Redneck.gunMode = 0;
       Pig.BaconCount = 0;
       Pig.SecondaryCount = 0;

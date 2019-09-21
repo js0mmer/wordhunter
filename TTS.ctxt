@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=TTS
+comment0.text=\r\n\ Class\ for\ handling\ text\ to\ speech\r\n\ \r\n\ @author\ Jacob\ Sommer\r\n\ @version\ 2019-09-17\r\n
+comment1.params=
+comment1.target=void\ setupSynthesizer()
+comment2.params=text
+comment2.target=void\ speak(java.lang.String)
+numComments=3
