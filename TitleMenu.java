@@ -21,8 +21,8 @@ public class TitleMenu extends Actor
     {
         if(mX>=getX()-img.getWidth()/2 && mX<=getX()+img.getWidth()/2 && mY>=getY()-img.getHeight()/2 && mY<=getY()+img.getHeight()/2)
         {
-            if(getX()<150) setLocation(getX()+5,getY());
+            if(getX()<350) setLocation(getX()+5,getY());
         }
-        else if(getX()>25) setLocation(getX()-5,getY());
+        else if(getX()>-20) setLocation(getX()-15,getY());
     }    
 }
