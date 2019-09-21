@@ -4,7 +4,6 @@ import greenfoot.Greenfoot;
 public class Pig
   extends Actor
 {
-  private String[] words = new String[]{ "gay", "bruh" };
   boolean baconOrNot = false;
   int health = 15;
   int time = 0;
